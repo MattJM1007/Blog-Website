@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+
+
+<section class="edit-post">
+    <h1 class="edit-page-title">Upgrade Your Thoughts</h1>
+
+    <form action="/update/<%= id %>" method="POST">
+        <label for="new-title">Post Title</label>
+        <input class="title-input" type="text" id="edit-title" name="new-title" value="<%= Title %>">
+
+        <label for="new-content">Post Content</label>
+        <textarea class="content-input" name="new-content" required><%= Content %></textarea>
+
+        <input class="post-btn" type="submit" value="Update">
+    </form>
+
+
+</section>
+
+
+<%- include("partials/footer.ejs") %>
